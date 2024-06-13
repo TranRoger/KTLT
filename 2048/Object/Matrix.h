@@ -33,6 +33,8 @@ public:
             }
         }
     }
+    Matrix(const int& rows, const int& columns, const int& score, int** matrix) : 
+        _rows(rows), _columns(columns), _score(score), _matrix(matrix) { }
 public:
     // operation
     int score() const;
@@ -46,4 +48,6 @@ public:
     int columns() const;
     int rows() const;
     int at(const int&, const int&) const;
+    int max();
+    void freeMemory();
 };

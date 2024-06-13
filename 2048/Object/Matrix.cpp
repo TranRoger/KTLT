@@ -159,3 +159,25 @@ int Matrix::rows() const {
 int Matrix::at(const int& i, const int& j) const {
     return _matrix[i][j];
 }
+
+int Matrix::max() {
+    int result = -1;
+    for (int i = 0; i < _rows; i++) {
+        for (int j = 0; j < _columns; j++) {
+            if (result < _matrix[i][j]) {
+                result = _matrix[i][j];
+            }
+        }
+    }
+
+    return result;
+}
+
+void Matrix::freeMemory() {
+    for (int i = 0; i < _rows; i++) {
+        delete _matrix[i];
+        _matrix[i] = nullptr;
+    }
+    delete _matrix;
+    _matrix = nullptr;
+}

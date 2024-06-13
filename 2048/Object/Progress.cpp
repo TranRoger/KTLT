@@ -2,8 +2,13 @@
 
 Progress::Progress(LoadSetting setting) {
     Matrix matrix(setting.rows(), setting.cols());
+    matrix.addRandom();
+    matrix.addRandom();
     _data.push_back(matrix);
 }
+
+Progress::Progress(stack<Matrix> data, stack<Matrix> cache) :
+    _data(data), _cache(cache) { }
 
 Matrix Progress::getCurrent() {
     return _data.top();
@@ -30,4 +35,24 @@ void Progress::redo() {
 
     _data.push_back(_cache.top());
     _cache.pop();
+}
+
+stack<Matrix> Progress::getData() {
+    return _data;
+}
+
+stack<Matrix> Progress::getCache() {
+    return _cache;
+}
+
+void Progress::freeMemory() {
+    for (int i = 0; i < _data.size(); i++) {
+        _data[i].freeMemory();
+    }
+    _data.clear();
+
+    for (int i = 0; i < _cache.size(); i++) {
+        _cache[i].freeMemory();
+    }
+    _cache.clear();
 }
