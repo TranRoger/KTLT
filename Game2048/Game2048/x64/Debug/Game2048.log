@@ -1,0 +1,10 @@
+﻿  main.cpp
+E:\HOC TAP\2023-2024 HK2\KTLT\Game2048\Game2048\string.h(11,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\HOC TAP\2023-2024 HK2\KTLT\Game2048\Game2048\PlayerList.h(100,30): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+E:\HOC TAP\2023-2024 HK2\KTLT\Game2048\Game2048\PlayerList.h(128,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+E:\HOC TAP\2023-2024 HK2\KTLT\Game2048\Game2048\Timer.h(34,84): warning C4244: 'return': conversion from '_Rep' to 'double', possible loss of data
+E:\HOC TAP\2023-2024 HK2\KTLT\Game2048\Game2048\Timer.h(34,84): warning C4244:         with
+E:\HOC TAP\2023-2024 HK2\KTLT\Game2048\Game2048\Timer.h(34,84): warning C4244:         [
+E:\HOC TAP\2023-2024 HK2\KTLT\Game2048\Game2048\Timer.h(34,84): warning C4244:             _Rep=__int64
+E:\HOC TAP\2023-2024 HK2\KTLT\Game2048\Game2048\Timer.h(34,84): warning C4244:         ]
+  Game2048.vcxproj -> E:\HOC TAP\2023-2024 HK2\KTLT\Game2048\x64\Debug\Game2048.exe
